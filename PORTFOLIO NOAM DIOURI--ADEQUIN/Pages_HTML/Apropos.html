@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>A propos de moi</title>
+    <meta name="description" content="Présentation de mon parcours et de mes compétences">
+    <link rel="icon" href="../image/headicon.jpg">
+    <link rel="stylesheet" href="../Pages_CSS/global.css">
+    <link rel="stylesheet" href="../Pages_CSS/apropos.css">
+  </head>
+
+  <body>
+    <header>
+      <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav>
+        <ul>
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="Apropos.html">Mon Profil</a></li>
+        <li><a href="Projets.html">Projets</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <article id="Apropos">
+        <h1>Mon parcours</h1>
+        <div>
+            <ul>
+              <li>Ma scolarité a débuté à l’école maternelle Jules Ferry à Lieusaint (2010-2013).</li>
+              <li>J’ai ensuite poursuivi à l’école primaire Louis Pergaud à Montry (2013-2018).</li>
+              <li>J’ai étudié au collège Stéphane Hessel à Saint-Germain-sur-Morin (2018-2022).</li>
+              <li>Lors de mon année de troisième, j’ai effectué un stage d’observation qui m’a permis de découvrir l’atmosphère et les attentes du monde professionnel.</li>
+              <li>J’ai ensuite poursuivi mes études au lycée Jean Vilar à Meaux (2022-2025), où j’ai obtenu un baccalauréat général avec les options Mathématiques et Anglais Monde Contemporain.</li>
+              <li>Je suis actuellement en 1ère année de BUT Informatique à l’IUT de Champs-sur-Marne, au sein de l’Université Gustave Eiffel, classée 640ᵉ mondiale et 29ᵉ au niveau national par le CWUR en 2025. 
+              Je souhaite mettre à profit mon temps à venir dans cet établissement et en alternance afin de renforcer mes compétences et approfondir mes connaissances professionnelles.<br><br> 
+              Mon objectif final est de devenir développeur d’applications, un métier qui satisfait mon ambition.</li>
+            </ul>
+        </div>
+      </article>
+
+      <section id="Competences">
+        <h1>Mon profil</h1>  
+          <h2>Qualités</h2>
+          <ul>
+            <li>Pragmatisme</li>
+            <li>Créativité</li>
+            <li>Curiosité</li>
+            <li>Adaptabilité</li>
+            <li>Communication </li>
+            <li>Esprit d'équipe</li>
+          </ul>
+
+          <h2>Language de programmation</h2>
+          <ul>
+            <li><img src="../image/python.png" alt="Python" width="100" height="100"> Python</li>
+            <li><img src="../image/html.png" alt="HTML/CSS" width="120" height="100"> HTML/CSS</li>
+            <li><img src="../image/java.png" alt="Java" width="110" height="100"> Java</li>
+            <li><img src="../image/C.png" alt="C" width="110" height="100"> C</li>
+            <li><img src="../image/Php.png" alt="Php" width="110" height="100"> Php</li>
+          </ul>
+
+          <h2>Compétences</h2>
+          <ul>
+            <li>Concevoir une application simple (Python, Java) répondant à un besoin client</li>
+            <li>Explorer une probléme de facon algorithmique</li>
+
+            <li>Modélisation de base de données (MCD/MLD)</li>
+            <li>Créer une base de données sur MariaDB</li>
+            <li>Créer un site web reportant des données de base de données</li>
+
+            <li>Coder un site web simple utlisant HTML et CSS</li>
+
+            <li>Gerer un projet (Diagramme de PERT, Gantt, Tableau RACI etc...)</li>
+          </ul>
+      </section>
+
+    </main>
+    <script>
+      const btn = document.querySelector('.hamburger');
+      const nav = document.querySelector('nav');
+
+      btn.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', isOpen);
+      });
+
+      // Ferme le menu au clic sur un lien
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    </script>
+  </body>
+</html>
