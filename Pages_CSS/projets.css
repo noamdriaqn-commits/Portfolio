@@ -1,72 +1,57 @@
-/* EXPERIENCE.CSS */
+/* PROJETS.CSS */
 
-
-/*PROPRIETE D'EXP*/
-
-main {
-  max-width: 1000px;
-  margin: 50px auto;
-  padding: 40px 20px;
+body {
+  background: none;
 }
 
 h1 {
   text-align: center;
-  font-size: 2.5rem;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
   margin-bottom: 40px;
-  letter-spacing: 1px;
+}
+
+.projet {
+  text-align: left;
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  background-color: rgba(235, 238, 240, 0.96);
+  width: min(1000px, 90%);
+  margin: 0 auto 40px auto;
+  padding: clamp(24px, 5vw, 64px) clamp(20px, 5vw, 48px);
+  border-radius: 10px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35);
+  animation: fadeUp 0.7s ease both;
 }
 
 .projet h2 {
-  font-size: 1.6rem;
-  margin: 60px 0 20px;
-  padding-left: 10px;
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  margin-bottom: 20px;
 }
 
 h3 {
   margin-top: 25px;
-  font-size: 1.2rem;
-  color: #222;
+  font-size: 1.1rem;
 }
 
 p {
-  padding: 8px 16px;
   line-height: 1.7;
-  color: #333;
 }
 
 main ul {
-  padding-left: 30px;
-  margin: 10px 0 20px;
+  padding-left: 20px;
 }
 
 main li {
   margin-bottom: 8px;
-  line-height: 1.5;
-  color: #444;
 }
 
 main a {
   color: #1a73e8;
   text-decoration: none;
-  font-weight: 500;
 }
 
 main a:hover {
   text-decoration: underline;
-}
-
-.projet {
-  margin-bottom: 80px;
-  padding-bottom: 40px;
-  border-bottom: 1px solid #e6e6e6;
-}
-
-
-img {
-  border: 1px solid black;
-  max-width: 100%;
-  height: auto;
-  display: block;
 }
 
 .projet-slider {
@@ -108,15 +93,8 @@ img {
   background: rgba(0, 0, 0, 0.8);
 }
 
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
-}
-
-
+.prev { left: 10px; }
+.next { right: 10px; }
 
 .modal {
   display: none;
@@ -126,7 +104,6 @@ img {
   background-color: rgba(0, 0, 0, 0.95);
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 .modal-content {
@@ -134,7 +111,6 @@ img {
   max-height: 90vh;
   object-fit: contain;
   border-radius: 10px;
-  margin: 0;
 }
 
 .close-modal {
@@ -143,10 +119,16 @@ img {
   right: 35px;
   color: white;
   font-size: 40px;
-  font-weight: bold;
   cursor: pointer;
 }
 
-.close-modal:hover {
-  color: #bbb;
+@media (max-width: 768px) {
+  .projet {
+    width: min(480px, 92%);
+    padding: 24px;
+  }
+
+  .slider-container img {
+    height: 280px;
+  }
 }

@@ -1,46 +1,42 @@
-  /* APROPOS.CSS */
-
-
-  /*PROPRIETE DE APROPOS*/
-
-/* === BASE AMÉLIORÉE === */
+/* APROPOS.CSS */
 
 body {
-  background: #f3f6fb;
+  background: none;
 }
 
-/* sections en "cartes" */
 #Apropos,
 #Competences {
-  max-width: 1000px;
-  margin: 100px auto 40px auto;
-  padding: 40px;
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  text-align: center;
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  background-color: rgba(235, 238, 240, 0.96);
+  width: min(1000px, 90%);
+  margin: 0 auto;
+  padding: clamp(24px, 5vw, 64px) clamp(20px, 5vw, 48px);
+  border-radius: 10px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35);
+  animation: fadeUp 0.7s ease both;
 }
 
 h1 {
-  text-align: center;
-  font-size: 2rem;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.5rem, 4vw, 2.4rem);
   margin-bottom: 20px;
-  border-left: none;
 }
 
 h2 {
   margin-top: 30px;
-  margin-bottom: 10px;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
   color: #222;
-  font-size: 1.3rem;
 }
 
 main ul {
-  padding-left: 20px;
+  padding-left: 0;
+  list-style-position: inside;
 }
 
 main li {
   margin-bottom: 10px;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 #Competences img {
@@ -59,7 +55,14 @@ main li {
 @media (max-width: 768px) {
   #Apropos,
   #Competences {
-    margin: 80px 16px 30px 16px;
-    padding: 25px;
+    width: min(480px, 92%);
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  #Apropos,
+  #Competences {
+    width: 94%;
   }
 }

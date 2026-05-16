@@ -53,7 +53,6 @@ img {
   line-height: 1.7;
 }
 
-/* ── ANIMATION ── */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -65,10 +64,9 @@ img {
   }
 }
 
-/* ── TABLETTE ── */
 @media (max-width: 768px) {
   main {
-    background-attachment: scroll;  /* fixed buggy sur iOS */
+    background-attachment: scroll;
     align-items: center;
     padding: 32px 16px;
   }
@@ -78,7 +76,6 @@ img {
   }
 }
 
-/* ── MOBILE ── */
 @media (max-width: 480px) {
   #texte {
     width: 94%;

@@ -1,7 +1,5 @@
 /* CONTACT.CSS */
 
-
-
 main {
   min-height: 80vh;
   display: flex;
@@ -21,7 +19,6 @@ main {
   max-width: 1000px;
 }
 
-/* INFOS */
 #info {
   flex: 1 1 40%;
 }
@@ -190,7 +187,6 @@ textarea {
   min-height: 130px;
 }
 
-/* BOUTON */
 button[type="submit"] {
   width: 100%;
   padding: 12px;
@@ -214,7 +210,6 @@ button[type="submit"]:active {
   transform: scale(0.98);
 }
 
-/* ── RESPONSIVE : tablette ── */
 @media (max-width: 768px) {
   #Contact {
     flex-direction: column;
@@ -235,7 +230,6 @@ button[type="submit"]:active {
   }
 }
 
-/* ── RESPONSIVE : mobile ── */
 @media (max-width: 480px) {
   main {
     padding: 24px 14px;
