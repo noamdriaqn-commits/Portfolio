@@ -40,8 +40,8 @@
           </button>
 
           <div class="slider-container" id="wall-slider">
-            <img src="../image/wallisyou.jpg" alt="Wall Is You image 1">
-            <img src="../image/wallisyou2.jpg" alt="Wall Is You image 2">
+            <img src="../image/wallisyou2.jpg" alt="Wall Is You image 1">
+            <img src="../image/wallisyou.jpg" alt="Wall Is You image 2">
           </div>
 
           <button class="slider-btn next" onclick="moveSlide('wall-slider', 1)">
@@ -183,29 +183,41 @@
     </div>
 
     <script>
-        const sliders = {};
+       const sliders = {};
 
-        function moveSlide(sliderId, direction) {
-          const slider = document.getElementById(sliderId);
-          const totalSlides = slider.children.length;
+      function moveSlide(sliderId, direction) {
+        const container = document.getElementById(sliderId);
+        const slides = container.querySelectorAll("img");
+        const totalSlides = slides.length;
 
-          if (!sliders[sliderId]) {
-            sliders[sliderId] = 0;
-          }
-
-          sliders[sliderId] += direction;
-
-          if (sliders[sliderId] < 0) {
-            sliders[sliderId] = totalSlides - 1;
-          }
-
-          if (sliders[sliderId] >= totalSlides) {
-            sliders[sliderId] = 0;
-          }
-
-          slider.style.transform =
-            `translateX(-${sliders[sliderId] * 100}%)`;
+        if (sliders[sliderId] === undefined) {
+          sliders[sliderId] = 0;
         }
+
+        sliders[sliderId] = sliders[sliderId] + direction;
+
+        if (sliders[sliderId] < 0) sliders[sliderId] = 0;
+        if (sliders[sliderId] >= totalSlides) sliders[sliderId] = totalSlides - 1;
+
+        container.style.transform = `translateX(-${sliders[sliderId] * 100}%)`;
+
+        updateArrows(sliderId, sliders[sliderId], totalSlides);
+      }
+
+      function updateArrows(sliderId, currentIndex, totalSlides) {
+      const container = document.getElementById(sliderId);
+      const wrapper = container.closest('.projet-slider');
+      const prevBtn = wrapper.querySelector('.prev');
+      const nextBtn = wrapper.querySelector('.next');
+
+      prevBtn.style.display = currentIndex === 0 ? 'none' : 'flex';
+      nextBtn.style.display = currentIndex === totalSlides - 1 ? 'none' : 'flex';
+    }
+
+    // Initialisation
+    document.querySelectorAll('.projet-slider').forEach(wrapper => {
+      wrapper.querySelector('.prev').style.display = 'none';
+    });
 
         // MODAL IMAGE
         const modal = document.getElementById("imageModal");

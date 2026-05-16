@@ -1,68 +1,69 @@
 /* APROPOS.CSS */
 
 body {
-  background: none;
+  background: #f3f6fb;
+}
+
+main {
+  margin-top: 20px;
+  width: 100%;
+  padding: clamp(80px, 10vh, 120px) clamp(16px, 4vw, 48px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(30px, 5vw, 60px);
 }
 
 #Apropos,
 #Competences {
-  text-align: center;
-  font-family: 'Courier Prime', 'Courier New', monospace;
-  background-color: rgba(235, 238, 240, 0.96);
-  width: min(1000px, 90%);
-  margin: 0 auto;
-  padding: clamp(24px, 5vw, 64px) clamp(20px, 5vw, 48px);
-  border-radius: 10px;
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35);
-  animation: fadeUp 0.7s ease both;
+  width: min(1000px, 100%);
+  padding: clamp(20px, 4vw, 48px);
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+#Apropos:hover,
+#Competences:hover {
+  transform: translateY(-3px);
 }
 
 h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.5rem, 4vw, 2.4rem);
+  text-align: center;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
   margin-bottom: 20px;
 }
 
 h2 {
-  margin-top: 30px;
+  margin-top: 25px;
   font-size: clamp(1.1rem, 2vw, 1.4rem);
   color: #222;
 }
 
 main ul {
-  padding-left: 0;
-  list-style-position: inside;
+  padding-left: 20px;
 }
 
 main li {
   margin-bottom: 10px;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 #Competences img {
-  width: 40px;
+  width: clamp(30px, 3vw, 45px);
   height: auto;
   margin-right: 10px;
   vertical-align: middle;
 }
 
-#Apropos:hover,
-#Competences:hover {
-  transform: translateY(-2px);
-  transition: 0.3s ease;
-}
-
 @media (max-width: 768px) {
-  #Apropos,
-  #Competences {
-    width: min(480px, 92%);
-    padding: 24px;
+  main {
+    padding: 90px 16px 40px;
   }
-}
 
-@media (max-width: 480px) {
   #Apropos,
   #Competences {
-    width: 94%;
+    width: 100%;
   }
 }
