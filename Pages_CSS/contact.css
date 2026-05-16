@@ -95,7 +95,7 @@ main {
 }
 
 .github {
-  background-color: #24292e;
+  background-color: #2d3033;
 }
 
 .btn-cv {
@@ -122,7 +122,6 @@ span {
   padding-left: 12px ;
 }
 
-/* FORMULAIRE */
 #formulaire {
   flex: 1 1 55%;
   background: white;
@@ -140,7 +139,6 @@ span {
   padding: 0;
 }
 
-/* GROUP */
 .form-group {
   display: flex;
   flex-direction: column;
