@@ -57,7 +57,7 @@ main li {
   vertical-align: middle;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   main {
     padding: 90px 16px 40px;
   }
