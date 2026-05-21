@@ -1,5 +1,9 @@
 /* CONTACT.CSS */
 
+html {
+  color: #111;
+}
+
 main {
   min-height: 80vh;
   display: flex;
