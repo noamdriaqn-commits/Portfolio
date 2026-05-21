@@ -21,6 +21,7 @@ h1 {
   margin-bottom: clamp(50px, 8vw, 100px);
   padding-bottom: clamp(30px, 5vw, 60px);
   border-bottom: 1px solid #e6e6e6;
+  background: #fff;
 }
 
 .projet h2 {
